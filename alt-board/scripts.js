@@ -5,3 +5,9 @@ const toggleActive = e => {
     e.className = "tile active";
   }
 };
+
+//start knockout work//
+function JeopardyViewModel() {
+  var self=this;
+  self.chosenQuestion = ko.observable();
+}

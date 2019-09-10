@@ -34,10 +34,13 @@
   background: linear-gradient(to top left, #000088, #0000ff);
   border: 3px solid #000;
 }
-.board .row .question-value {
+.board .row .tile .options {
+  font-size: 40px;
+}
+.board .row .value {
   display: block;
 }
-.board .row .question-answer {
+.board .row .question {
   display: none;
 }
 .board .row .tile.active {
@@ -50,9 +53,9 @@
   right: 0px;
   z-index: 5;
 }
-.board .row .tile.active .question-value {
+.board .row .tile.active .value {
   display: none;
 }
-.board .row .tile.active .question-answer {
+.board .row .tile.active .question {
   display: block;
 }
