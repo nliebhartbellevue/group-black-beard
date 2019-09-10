@@ -1,0 +1,62 @@
+.board {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .row {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .tile {
+      top: 0;
+      bottom: 0;
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5vw;
+      font-family: impact;
+      color: #fff;
+      background: $tile-bg;
+      border: 3px solid #000;
+
+      .options {
+        font-size: 40px;
+      }
+
+      .active {
+        border-width: 0;
+        font-size: 10vw;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 5;
+
+        .value {
+          display: none;
+        }
+
+        .question {
+          display: block;
+        }
+      }
+    }
+
+    .value {
+      display: block;
+    }
+
+    .question {
+      display: none;
+    }
+  }
+}
