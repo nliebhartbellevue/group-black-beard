@@ -9,8 +9,22 @@
   <body>
     <div class="board">
       <div id="categories" class="row categories"></div>
+      <div id="clues1" class="row clues"></div>
+      <div id="clues2" class="row clues"></div>
+      <div id="clues5" class="row clues"></div>
+      <div id="clues10" class="row clues"></div>
+      <div id="clues20" class="row clues"></div>
     </div>
 
     <script src="./index.js"></script>
+    <script>
+      const toggleActive = e => {
+        if (e.className == "tile active") {
+          e.className = "tile";
+        } else {
+          e.className = "tile active";
+        }
+      };
+    </script>
   </body>
 </html>
