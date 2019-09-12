@@ -8,6 +8,14 @@ const toggleActive = e => {
 
 //start knockout work//
 function JeopardyViewModel() {
-  var self=this;
+  var self = this;
   self.chosenQuestion = ko.observable();
-}
+  self.submitAnswer = ko.observable();
+  self.continue = ko.observable();
+
+  self.goToGame = function() {
+
+  }
+};
+
+ko.applyBindings(new JeopardyViewModel());
