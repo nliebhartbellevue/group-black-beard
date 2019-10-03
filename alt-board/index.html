@@ -104,7 +104,23 @@
           <div class="tile">Handling<br />Events</div>
         </div>
         <!-- $100 -->
-        <div id="oneHundred" class="row clues">
+        <div
+          id="oneHundred"
+          class="row clues"
+          data-bind="foreach: QuestionTiles"
+        >
+          <div
+            class="tile"
+            data-bind="if: QuestionTiles().Value == 100"
+            onclick="toggleActive(this)"
+          >
+            <div class="value" data-bind="text: QuestionTiles().Value"></div>
+            <div
+              class="question"
+              data-bind="text: QuestionTiles().Question"
+            ></div>
+          </div>
+
           <!-- <div class="tile" onclick="toggleActive(this)">
             <div class="value">$100</div>
             <div class="question">This is the question?</div>
@@ -239,6 +255,6 @@
     ></script>
     <script type="text/javascript" src="js/knockout-mapping-v2.4.1.js"></script>
     <script src="./js/scripts.js"></script>
-    <script src="./js/game.js"></script>
+    <!-- <script src="./js/game.js"></script> -->
   </body>
 </html>
